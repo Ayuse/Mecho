@@ -2,11 +2,10 @@
   "name": "simple_landingpage",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulp.js",
   "scripts": {
-    "build": "npm run build",
+    "build":"gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
-    
   },
   "repository": {
     "type": "git",

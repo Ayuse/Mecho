@@ -87,6 +87,10 @@ gulp.task('copyAddonsStyles', function () {
   return merge(aStyle1, aStyle2, aStyle3, aStyle4, aStyle5);
 });
 
-gulp.task('build', function () {
-  gulp.src('pages/*.html').pipe(gulp.dest('dist'));
-});
+// gulp.task('build', function () {
+//   gulp.src('index.html').pipe(gulp.dest('dist'));
+// });
+// gulp.task('build', function (callback) {
+//   'clean:dist', ['sass', 'useref', 'images', 'fonts'];
+// });
+gulp.task('build', ['css', 'js', 'imgs']);
