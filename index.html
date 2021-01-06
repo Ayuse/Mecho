@@ -716,7 +716,7 @@
                 <h4 class="modal-title" id="exampleModalLabel">Join Us</h4>
               </div>
               <div class="modal-body">
-                <form>
+                <form id="paymentForm">
                   <div class="form-group">
                     <label for="Name">Name</label>
                     <input
@@ -724,6 +724,7 @@
                       class="form-control"
                       id="Name"
                       placeholder="Name"
+                      required
                     />
                   </div>
                   <div class="form-group">
@@ -731,8 +732,9 @@
                     <input
                       type="email"
                       class="form-control"
-                      id="Email-1"
+                      id="Email-1 email-address"
                       placeholder="Email"
+                      required
                     />
                   </div>
                   <div class="form-group">
@@ -742,6 +744,17 @@
                       class="form-control"
                       id="Company-1"
                       placeholder="Company Name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="amount"
+                      placeholder="Amount"
+                      required
                     />
                   </div>
                   <div class="form-group">
@@ -751,6 +764,11 @@
                       id="Message"
                       placeholder="Enter your Message"
                     ></textarea>
+                  </div>
+                  <div class="form-submit">
+                    <button type="submit" onclick="payWithPaystack()">
+                      Pay
+                    </button>
                   </div>
                 </form>
               </div>
@@ -769,6 +787,7 @@
         </div>
       </div>
     </div>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
     <script src="vendors/jquery/jquery.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
     <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
