@@ -7,7 +7,7 @@ function payWithPaystack() {
     email: document.getElementById('email-address').value,
     amount: 1000 * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
     currency: 'NGN', // Use GHS for Ghana Cedis or USD for US Dollars
-    ref: 'aa', // Replace with a reference you generated
+    ref: 'mecho' + Math.floor(Math.random() * 1000000000 + 1), // Replace with a reference you generated
     callback: function (response) {
       //this happens after the payment is completed successfully
       var reference = response.reference;
